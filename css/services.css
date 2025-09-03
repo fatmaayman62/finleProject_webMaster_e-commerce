@@ -1,0 +1,33 @@
+ 
+
+
+/* start home */
+.home {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../imgs/bg-image\ \(1\).png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  color: var(--main-text-color);
+}
+/* end home */
+
+
+.services {
+  h2{
+    font-size: 18px;
+  }
+}
+/* start query services */
+@media(max-width:460px){
+  
+  .services {
+    font-size: small;
+    h2{
+    width: 100% !important;
+  }
+  }
+}
+/* end query services */

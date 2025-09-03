@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #faeddf;
+  --main-text-color: #ffffff;
+  --transitions: all 0.3s ease-in;
+}
+.bg-main_color_abdo {
+  background-color: var(--main-color);
+}
+.btn-brown-abdo {
+  background-color: #826300;
+  color: var(--main-text-color);
+  font-weight: bold;
+}
+.btn-brown-abdo:hover {
+  box-shadow: 0 0 15px 5px #ffffff58;
+  background-color: #977401;
+}
+.row {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.display_none_abdo {
+  display: none;
+}
+
+/* start header */
+.navbar {
+  height: 80px;
+}
+.img-logo-abdo {
+  width: 80px;
+  height: 80px;
+}
+.show {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 80px;
+  ul,
+  form {
+    padding-left: 8px;
+  }
+}
+.collapsing {
+  transition: none;
+}
+/* end header */
+
+/* start home */
+.home_abdo {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../imgs/bg-image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  color: var(--main-text-color);
+}
+/* end home */
+
+/* start register */
+.register_abdo {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99999;
+}
+form p {
+  font-size: 13px;
+}
+
+/* start query register */
+@media(max-width:900px){
+  .register_abdo{
+  form{
+    width: 70% !important;
+  }
+}
+}
+@media(max-width:500px){
+  .register_abdo{
+  form{
+    width: 85% !important;
+  }
+}
+}
+@media(max-width:370px){
+  .register_abdo{
+  form,.btn{
+    width: 95% !important;
+    font-size: small;
+  }
+  input::placeholder{
+    font-size: small;
+
+  }
+}
+} 
+  
+
+/* end query register */
+/* end register */
+
+/* start login */
+.login_abdo {
+  position: fixed;
+  
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99999;
+
+  form{
+    height:260px;
+  }
+}
+
+
+/* start query login */
+@media(max-width:900px){
+  .login_abdo{
+  form{
+    width: 70% !important;
+  }
+}
+}
+@media(max-width:500px){
+  .login_abdo{
+  form{
+    width: 85% !important;
+  }
+}
+}
+@media(max-width:370px){
+  .login_abdo{
+  form,.btn{
+    width: 95% !important;
+    font-size: small;
+  }
+  input::placeholder{
+    font-size: small;
+
+  }
+}
+} 
+  
+
+/* end query login */
+/* end login */
+
+/* start Made-To-Order */
+.Made-To-Order-abdo {
+  height: 40vh;
+  width: 100%;
+  background-image: url(../imgs/Rectangle\ 8.png);
+  background-repeat: no-repeat;
+  background-size: fill;
+  background-position: center center;
+  color: var(--main-text-color);
+}
+/* end Made-To-Order */
+
+/* start feature products */
+.feature_products_abdo .box_abdo {
+  span {
+    font-size: 14px;
+  }
+}
+/* end feature products */
+
+/* start about website do */
+.about_website_abdo {
+  /* background-color: #D9D9D9; */
+  p {
+    font-size: 12px;
+  }
+}
+/* end about website do */
+
+/* start shop collection */
+.shop_collection_abdo figure {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.shop_collection_abdo img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+}
+.shop_collection_abdo span {
+  bottom: 6%;
+  left: 50%;
+  font-size: 12px;
+  transform: translateX(-50%);
+}
+/* end shop collection */
+
+
+/* start about */
+/* start query  */
+@media(max-width:768px){
+  .about_website_abdo{
+    p{
+      width: 80% !important;
+      margin: 0 auto;
+
+    }
+  }
+}
+@media(max-width:480px){
+  .about_website_abdo{
+    p{
+      width: 100% !important;
+      margin: 0 auto;
+
+    }
+  }
+}
+/* end query  */
+/* end about */
+
+
+
+/* start footer */
+footer {
+  background-color: var(--main-color);
+  height:fit-content;
+  padding: 50px 0;
+  .row {
+    height: 100% !important;
+  }
+  input {
+    border: none;
+    background-color: transparent;
+  }
+  form {
+    border-bottom: 2px solid black;
+    width: fit-content;
+  }
+  li,
+  p {
+    font-size: 14px;
+  }
+  li a:hover {
+    transform: scale(1.012);
+  }
+  .social_icons_abdo a:hover {
+    transform: scale(1.012);
+  }
+}
+/* end footer */
+
+ 
+ 

@@ -1,0 +1,28 @@
+/* start shop */
+.shop_fatma {
+  margin-top: 90px;
+  margin-bottom: 20px;
+
+  figure {
+    height: 250px;
+  }
+}
+
+/* start query */
+@media (max-width: 800px) {
+  .shop_fatma {
+    .col-3{
+        width: 50% !important;
+    }
+  }
+}
+@media (max-width: 380px) {
+  .shop_fatma {
+    .col-3{
+        width: 100% !important;
+    }
+  }
+}
+/* end query */
+
+/* end shop */

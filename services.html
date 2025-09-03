@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head class="">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailor</title>
+
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/stye.css" />
+    <link rel="stylesheet" href="css/products.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/services.css" />
+  </head>
+
+  <body>
+    <!-- start Navbar -->
+    <header
+      class="navbar navbar-expand-lg bg-main_color_abdo pb-md-0 pb-1 fixed-top z-3"
+    >
+      <div class="container">
+        <div class="img-logo-abdo navbar-brand logo">
+          <img
+            src="imgs/logo.png"
+            class="logo_abdo w-100 nav-link text-white fw-bold z-2"
+            alt="logo"
+          />
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="true"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav
+          class="collapse navbar-collapse bg-main_color_abdo"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-3">
+              <a
+                class="nav-link fw-medium"
+                aria-current="page"
+                href="./index.html"
+                >HOME</a
+              >
+            </li>
+            <li class="nav-item mx-3">
+              <a
+                class="nav-link fw-medium"
+                aria-current="page"
+                href="./products.html"
+                >PRODUCTS</a
+              >
+            </li>
+            <li class="nav-item mx-3">
+              <a
+                class="nav-link fw-medium"
+                aria-current="page"
+                href="./shop.html"
+                >SHOP</a
+              >
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link fw-medium active" aria-current="page" href="#"
+                >SERVICES</a
+              >
+            </li>
+            <li class="nav-item mx-3">
+              <a
+                class="nav-link fw-medium"
+                aria-current="page"
+                href="./contact.html"
+                >CONTACT</a
+              >
+            </li>
+          </ul>
+          <form class="d-flex">
+            <a href="#" class="text-black mx-2 register_icon_abdo"
+              ><i class="fa-solid fa-user"></i
+            ></a>
+            <a
+              href="#"
+              class="text-black mx-2 position-relative"
+              onclick="toggle_sidebar_fatma()"
+              ><i class="fa-solid fa-cart-shopping"
+                ><p class="cart_counter_fatma d-none">0</p></i
+              ></a
+            >
+            <a href="#" class="text-black mx-2"
+              ><i class="fa-solid fa-search"></i
+            ></a>
+            <a
+              href="#"
+              class="text-black mx-2 display_none_abdo logOut_icon_abdo"
+              ><i class="fa-solid fa-sign-out"></i
+            ></a>
+          </form>
+        </nav>
+      </div>
+    </header>
+    <!-- end navbar -->
+
+    <!-- start register page -->
+    <section class="register_abdo display_none_abdo">
+      <div
+        class="register_box_abdo w-100 h-100 d-flex justify-content-center align-items-center flex-column"
+      >
+        <form class="w-50 bg-light rounded-5 p-4">
+          <div
+            class="alert alert-danger p-1 d-none reg_message_abdo"
+            role="alert"
+          ></div>
+          <div class="box_abdo d-flex flex-column">
+            <label for="name">Name</label>
+            <input required pattern=/^[a-z]/ class="my-1 form-control"
+            type="text" placeholder="Enter your name" id="name" />
+            <p class="text-danger my-0 ms-2 name_warnig_reg_abdo"></p>
+          </div>
+          <div class="box_abdo d-flex flex-column">
+            <label for="email">Email</label>
+            <input required pattern=/^[a-z]/ class="my-1 form-control"
+            type="email" placeholder="Enter your email" id="email" />
+            <p class="text-danger my-0 ms-2 email_warnig_reg_abdo"></p>
+          </div>
+          <div class="box_abdo d-flex flex-column">
+            <label for="password">Password</label>
+            <input pattern=/^[0-9]{5,8}/ required class="my-1 form-control"
+            type="password" placeholder="Enter your password" id="password" />
+            <p class="text-danger my-0 ms-2 password_warnig_reg_abdo"></p>
+          </div>
+          <div class="box_abdo d-flex flex-column">
+            <label for="Repassword">RePassword</label>
+            <input required pattern=/^[0-9]{5,8}/ class="my-1 form-control"
+            type="password" placeholder="Enter your Repassword" id="Repassword"
+            />
+            <p class="text-danger my-0 ms-2 repassword_warnig_reg_abdo"></p>
+          </div>
+          <input
+            class="my-3 btn btn-outline-primary w-100 register_form_btn_abdo"
+            type="submit"
+            value="Register"
+          />
+        </form>
+      </div>
+    </section>
+    <!-- end register page -->
+
+    <!-- start login page -->
+    <section class="login_abdo display_none_abdo">
+      <div
+        class="login_box_abdo w-100 h-100 d-flex justify-content-center align-items-center flex-column"
+      >
+        <form class="w-50 h-50 bg-light rounded-5 p-4 position-relative">
+          <div
+            class="alert alert-danger p-1 d-none log_message_abdo"
+            role="alert"
+          ></div>
+
+          <div class="w-75 position-absolute start-50 top-50 translate-middle">
+            <div class="box_abdo d-flex flex-column">
+              <label for="email_login">Email</label>
+              <input
+                required
+                class="my-1 form-control"
+                type="email"
+                placeholder="Enter your email"
+                id="email_login"
+              />
+            </div>
+            <div class="box_abdo d-flex flex-column">
+              <label for="password_login">Password</label>
+              <input
+                required
+                class="my-1 form-control"
+                type="password"
+                placeholder="Enter your password"
+                id="password_login"
+              />
+            </div>
+
+            <input
+              class="my-3 btn btn-outline-primary w-100 login_form_btn_abdo"
+              type="submit"
+              value="login"
+            />
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- end login page -->
+
+    <!-- start home page -->
+    <section class="home position-relative">
+      <div
+        class="wrapper-text position-absolute top-50 start-50 translate-middle text-center w-75"
+      >
+        <span class="fs-4 d-block">CUSTOM-MADE</span>
+        <h1 class="my-4">FOR YOUR SPECIAL DAY</h1>
+        <div class="btn btn-brown-abdo">Learn More</div>
+
+      </div>
+    </section>
+    <!-- end home page -->
+
+    <main>
+      <section class="services">
+        <div class="container my-5">
+          <h2 class="w-75 mx-auto text-center my-5">
+            Stop by our store to experience all we have to offer: tailoring &
+            alterations, made-to-measure, bespoke, and made-to-order. Design
+            your perfect wardrobe today!
+          </h2>
+          <div class="content">
+            <div class="row my-4 justify-content-center">
+              <div class="col-md-6 my-2">
+                <div class="box">
+                  <figure>
+                    <img class="w-100"
+                      src="imgs/scissors-cutting-fabric-straight-on_c0fe835d-0e13-4d0f-b0ab-02a32c573e42 1 (1).png"
+                      alt="img"
+                    />
+                  </figure>
+                  <div class="wraper-data text-center">
+                    <h3 class="h5">Tailoring & Alteration</h3>
+                    <p>
+                      we pride ourselves on our high end style of tailoring. We
+                      offer alterations for both men and women in formal
+                      traditional garments as well as casual wear.
+                    </p>
+                    <span class="btn border rounded-4">Know More</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 my-2">
+                <div class="box">
+                  <figure>
+                    <img class="w-100"
+                      src="imgs/cloth-samples-for-custom-made-suits-and-jackets-PJHQWGK 1 (1).png"
+                      alt="img"
+                    />
+                  </figure>
+                  <div class="wraper-data text-center">
+                    <h3 class="h5">Made-to-Measure</h3>
+                    <p>
+                      Made-to-measure is a custom based on our exclusive fitting
+                      block, also known as our try-on. With this try-on, we use
+                      35 distinct measurements to ensure you are designing
+                      a garment with a remarkable fit!
+                    </p>
+                    <span class="btn border rounded-4">Know More</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 my-2">
+                <div class="box">
+                  <figure>
+                    <img class="w-100" src="imgs/suit_display 1 (1).png" alt="img" />
+                  </figure>
+                  <div class="wraper-data text-center">
+                    <h3 class="h5">Made-to-Order</h3>
+                    <p>
+                      This is our small batch production made just for you. We
+                      give you a range of custom design options for a specific
+                      garment (colors, buttons, style, etc.) and, once ordered,
+                      we begin working on it immediately.
+                    </p>
+                    <span class="btn border rounded-4">Know More</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- start show product in sidebar -->
+      <section class="sidebar_showProducts_shopping_fatma">
+        <aside class="shadow display_none_fatma"></aside>
+      </section>
+      <!-- end show product in sidebar -->
+    </main>
+
+    <!-- start footer -->
+    <footer>
+      <div class="container h-100">
+        <div class="row justify-content-center align-items-center">
+          <div class="col box_abdo">
+            <span>SIGN UP AND SAVE</span>
+            <p>
+              Subscribe to get special offers, free giveaways, and
+              once-in-a-lifetime deals
+            </p>
+            <form class="my-3">
+              <input type="email" placeholder="Enter Your Email" />
+              <span><i class="fa-solid fa-mail-bulk"></i></span>
+            </form>
+            <div class="social_icons_abdo d-flex gap-2">
+              <a href="#" class="nav-link"
+                ><i class="fa-xl fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" class="nav-link"
+                ><i class="fa-xl fa-brands fa-facebook"></i
+              ></a>
+              <a href="#" class="nav-link"
+                ><i class="fa-xl fa-brands fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col box_abdo">
+            <h2 class="fs-6">LOCATION</h2>
+            <ul class="list-unstyled">
+              <li><a href="#" class="nav-link">007,James bond street,</a></li>
+              <li><a href="#" class="nav-link">London,</a></li>
+              <li><a href="#" class="nav-link">England.</a></li>
+              <li><a href="#" class="nav-link">Mon-Sat 10AM - 9PM</a></li>
+              <li><a href="#" class="nav-link">Sun:Closed</a></li>
+            </ul>
+          </div>
+          <div class="col box_abdo">
+            <h2 class="fs-6">About</h2>
+            <ul class="list-unstyled">
+              <li><a href="#" class="nav-link">FAQ,</a></li>
+              <li><a href="#" class="nav-link">Services</a></li>
+              <li><a href="#" class="nav-link">Contact</a></li>
+              <li><a href="#" class="nav-link">Start a Return or</a></li>
+              <li><a href="#" class="nav-link">Exchange</a></li>
+            </ul>
+          </div>
+          <div class="col box_abdo">
+            <h2 class="fs-6">Tailoring</h2>
+            <ul class="list-unstyled">
+              <li><a href="#" class="nav-link">Made-to-Measure</a></li>
+              <li><a href="#" class="nav-link">Weddings</a></li>
+              <li><a href="#" class="nav-link">Made-to-Order</a></li>
+            </ul>
+          </div>
+          <div class="col box_abdo">
+            <h2 class="fs-6">Orders</h2>
+            <ul class="list-unstyled">
+              <li><a href="#" class="nav-link">Returns</a></li>
+              <li><a href="#" class="nav-link">Terms and Conditions</a></li>
+              <li><a href="#" class="nav-link">Privacy and policy</a></li>
+              <li><a href="#" class="nav-link">Gifts</a></li>
+              <li><a href="#" class="nav-link">Refund Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/contact.js"></script>
+  </body>
+</html>
