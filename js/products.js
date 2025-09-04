@@ -25,8 +25,8 @@ function display_products_fatma(data) {
   for (let i = 0; i < data.length; i++) {
     console.log(data[i].imageCover);
     cartona += `
-          <div class="col-3">
-              <div class="box_fatma text-center mb-2">
+            <div class="col-3">
+              <div class="box_fatma text-center mb-2 position-relative">
                 <figure>
                   <img
                     class="w-100 h-100"
@@ -43,6 +43,11 @@ function display_products_fatma(data) {
                     .join(" ")}</h2>
                   <span>${data[i].price}$</span>
                 </div>
+                 <ul class="list-unstyled bg-black w-auto  position-absolute px-2 end-0 top-0">
+              <li><i class="fa-solid fa-heart text-white"></i></li>
+              <li><i class="fa-solid fa-share text-white"></i></li>
+              <li><i class="fa-solid fa-search text-white"></i></li>
+            </ul>
                 <div
                   class="details_product_fatma d-none justify-content-between"
                 >
