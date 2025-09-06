@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head class="">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tailor</title>
-     
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/stye.css" />
     <link rel="stylesheet" href="css/products.css" />
-    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="contact.html">
+    >
   </head>
 
   <body>
@@ -63,12 +67,18 @@
               >
             </li>
             <li class="nav-item mx-3">
-              <a class="nav-link fw-medium" aria-current="page" href="./services.html"
+              <a
+                class="nav-link fw-medium"
+                aria-current="page"
+                href="./services.html"
                 >SERVICES</a
               >
             </li>
             <li class="nav-item mx-3">
-              <a class="nav-link fw-medium active" aria-current="page" href="#"
+              <a
+                class="nav-link fw-medium active"
+                aria-current="page"
+                href="#"
                 >CONTACT</a
               >
             </li>
@@ -104,7 +114,7 @@
       <div
         class="register_box_abdo w-100 h-100 d-flex justify-content-center align-items-center flex-column"
       >
-        <form class="w-50 bg-light rounded-5 p-4">
+        <form class="bg-light rounded-5 p-4 w-50">
           <div
             class="alert alert-danger p-1 d-none reg_message_abdo"
             role="alert"
@@ -149,13 +159,15 @@
       <div
         class="login_box_abdo w-100 h-100 d-flex justify-content-center align-items-center flex-column"
       >
-        <form class="w-50 h-50 bg-light rounded-5 p-4 position-relative">
+        <form class="bg-light rounded-5 p-4 position-relative w-50 ">
           <div
             class="alert alert-danger p-1 d-none log_message_abdo"
             role="alert"
           ></div>
 
-          <div class="w-75 position-absolute start-50 top-50 translate-middle">
+          <div
+            class="position-absolute top-50 start-50 translate-middle w-100 px-3"
+          >
             <div class="box_abdo d-flex flex-column">
               <label for="email_login">Email</label>
               <input
@@ -188,6 +200,9 @@
     </section>
     <!-- end login page -->
 
+ 
+
+    
     <main>
       <!-- صف الصورة والنص -->
       <section class="contacts py-5">
@@ -222,9 +237,7 @@
           <div class="row justify-content-center">
             <div class="col-lg-8">
               <div class="card shadow p-4">
-                <h3 class="card-title text-center mb-4">
-                  Send a Message
-                </h3>
+                <h3 class="card-title text-center mb-4">Send a Message</h3>
                 <form id="contactForm">
                   <div class="mb-3">
                     <label for="fullName" class="form-label">Full Name</label>
@@ -257,7 +270,7 @@
                       required
                     ></textarea>
                   </div>
-                  <button type="submit" class="btn btn-brown-fatma  w-100 py-2">
+                  <button type="submit" class="btn btn-brown-fatma w-100 py-2">
                     Send Message
                   </button>
                 </form>
@@ -284,21 +297,24 @@
       <!-- end show product in sidebar -->
     </main>
 
+
     <!-- start footer -->
     <footer>
-      <div class="container h-100">
-        <div class="row justify-content-center align-items-center">
-          <div class="col box_abdo">
-            <span>SIGN UP AND SAVE</span>
-            <p>
+      <div class="container h-100 py-4">
+        <div class="row justify-content-center  h-100">
+          <div class="col-lg-2 col-md-4 col-12 box_abdo mb-4 mb-md-0">
+            <span class="fw-bold d-block">SIGN UP AND SAVE</span>
+            <p class="mt-2">
               Subscribe to get special offers, free giveaways, and
               once-in-a-lifetime deals
             </p>
-            <form class="my-3">
+            <form class="my-3 mx-auto mx-md-0">
               <input type="email" placeholder="Enter Your Email" />
               <span><i class="fa-solid fa-mail-bulk"></i></span>
             </form>
-            <div class="social_icons_abdo d-flex gap-2">
+            <div
+              class="social_icons_abdo d-flex gap-2 justify-content-center justify-content-md-start"
+            >
               <a href="#" class="nav-link"
                 ><i class="fa-xl fa-brands fa-instagram"></i
               ></a>
@@ -310,9 +326,9 @@
               ></a>
             </div>
           </div>
-          <div class="col box_abdo">
-            <h2 class="fs-6">LOCATION</h2>
-            <ul class="list-unstyled">
+          <div class="col-lg-2 col-md-4 col-6 box_abdo mb-4 mb-md-0">
+            <h2 class="fs-6 fw-bold">LOCATION</h2>
+            <ul class="list-unstyled mt-3">
               <li><a href="#" class="nav-link">007,James bond street,</a></li>
               <li><a href="#" class="nav-link">London,</a></li>
               <li><a href="#" class="nav-link">England.</a></li>
@@ -320,9 +336,9 @@
               <li><a href="#" class="nav-link">Sun:Closed</a></li>
             </ul>
           </div>
-          <div class="col box_abdo">
-            <h2 class="fs-6">About</h2>
-            <ul class="list-unstyled">
+          <div class="col-lg-2 col-md-4 col-6 box_abdo mb-4 mb-md-0">
+            <h2 class="fs-6 fw-bold">About</h2>
+            <ul class="list-unstyled mt-3">
               <li><a href="#" class="nav-link">FAQ,</a></li>
               <li><a href="#" class="nav-link">Services</a></li>
               <li><a href="#" class="nav-link">Contact</a></li>
@@ -330,17 +346,17 @@
               <li><a href="#" class="nav-link">Exchange</a></li>
             </ul>
           </div>
-          <div class="col box_abdo">
-            <h2 class="fs-6">Tailoring</h2>
-            <ul class="list-unstyled">
+          <div class="col-lg-2 col-md-4 col-6 box_abdo mb-4 mb-md-0">
+            <h2 class="fs-6 fw-bold">Tailoring</h2>
+            <ul class="list-unstyled mt-3">
               <li><a href="#" class="nav-link">Made-to-Measure</a></li>
               <li><a href="#" class="nav-link">Weddings</a></li>
               <li><a href="#" class="nav-link">Made-to-Order</a></li>
             </ul>
           </div>
-          <div class="col box_abdo">
-            <h2 class="fs-6">Orders</h2>
-            <ul class="list-unstyled">
+          <div class="col-lg-2 col-md-4 col-6 box_abdo">
+            <h2 class="fs-6 fw-bold">Orders</h2>
+            <ul class="list-unstyled mt-3">
               <li><a href="#" class="nav-link">Returns</a></li>
               <li><a href="#" class="nav-link">Terms and Conditions</a></li>
               <li><a href="#" class="nav-link">Privacy and policy</a></li>
@@ -354,6 +370,7 @@
     <!-- end footer -->
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/products.js"></script>
     <script src="js/contact.js"></script>
