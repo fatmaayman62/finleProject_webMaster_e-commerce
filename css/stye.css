@@ -68,10 +68,11 @@
 
 /* start register */
 .register_abdo {
-  position: fixed;
+  position: fixed; 
   inset: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 99999;
+ 
 }
 form p {
   font-size: 13px;
@@ -111,14 +112,13 @@ form p {
 
 /* start login */
 .login_abdo {
-  position: fixed;
-  
+  position: fixed; 
   inset: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 99999;
 
   form{
-    height:260px;
+    height:330px;
   }
 }
 
@@ -262,3 +262,4 @@ footer {
 
  
  
+
