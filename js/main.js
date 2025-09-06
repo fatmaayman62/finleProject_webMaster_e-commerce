@@ -2,7 +2,7 @@ let input_name_register_abdo = document.getElementById("name");
 let input_email_register_abdo = document.getElementById("email");
 let input_password_register_abdo = document.getElementById("password");
 let input_Repassword_register_abdo = document.getElementById("Repassword");
- let check_reg_abdo={index1:1,index2:1,index3:1,index4:1};
+let check_reg_abdo = { index1: 1, index2: 1, index3: 1, index4: 1 };
 let container_localStorage_abdo;
 
 if (localStorage.getItem("user_register_abdo")) {
@@ -27,9 +27,9 @@ const swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
   loop: true,
-  autoplay:{
-    delay: 3000
-  }
+  autoplay: {
+    delay: 3000,
+  },
 });
 //end function slider
 
@@ -118,7 +118,7 @@ register_btn_abdo.addEventListener("click", (e) => {
     .querySelector(".register_abdo")
     .classList.remove("display_none_abdo");
 });
- 
+
 function stored_data_abdo() {
   let cartona = {
     name: input_name_register_abdo.value,
@@ -148,31 +148,27 @@ input_name_register_abdo.addEventListener("keyup", (e) => {
     name_warning.innerHTML = "Must start with a letter";
   } else {
     name_warning.innerHTML = "";
-    check_reg_abdo.index1=0;
-    
+    check_reg_abdo.index1 = 0;
   }
 });
-
 
 input_email_register_abdo.addEventListener("keyup", (e) => {
   e.stopPropagation();
 
   let email_warning = document.querySelector(".email_warnig_reg_abdo");
   let value = input_email_register_abdo.value.trim();
-  let pattern =  /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
+  let pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
 
   if (value === "") {
     email_warning.innerHTML = "this input required";
   } else if (!pattern.test(value)) {
     email_warning.innerHTML = "email must like this test@example.com";
   } else {
-    email_warning.innerHTML = ""; 
-    check_reg_abdo.index2=0;
+    email_warning.innerHTML = "";
+    check_reg_abdo.index2 = 0;
   }
 });
 
- 
-  
 input_password_register_abdo.addEventListener("keyup", (e) => {
   e.stopPropagation();
 
@@ -183,58 +179,67 @@ input_password_register_abdo.addEventListener("keyup", (e) => {
   } else if (!pattern.test(input_password_register_abdo.value.trim())) {
     password_warning.innerHTML = "must min letter 5 max 8";
   } else {
-    password_warning.innerHTML = ""; 
-     check_reg_abdo.index3=0;
+    password_warning.innerHTML = "";
+    check_reg_abdo.index3 = 0;
   }
 });
-
 
 input_Repassword_register_abdo.addEventListener("keyup", (e) => {
   e.stopPropagation();
 
-  let repassword_warning = document.querySelector(".repassword_warnig_reg_abdo");
+  let repassword_warning = document.querySelector(
+    ".repassword_warnig_reg_abdo"
+  );
 
   if (input_Repassword_register_abdo.value.trim() == "") {
     repassword_warning.innerHTML = "this input required";
-  } else if (input_Repassword_register_abdo.value.trim() !== input_password_register_abdo.value.trim() ) {
+  } else if (
+    input_Repassword_register_abdo.value.trim() !==
+    input_password_register_abdo.value.trim()
+  ) {
     repassword_warning.innerHTML = "not matched";
   } else {
     repassword_warning.innerHTML = "";
-   check_reg_abdo.index4=0;
+    check_reg_abdo.index4 = 0;
   }
 });
-
 
 register_form_btn_abdo.addEventListener("click", (e) => {
   e.stopPropagation();
   e.preventDefault();
- 
-  if(check_reg_abdo.index1 == 0 && check_reg_abdo.index2 == 0 && check_reg_abdo.index3==0 && check_reg_abdo.index4 ==0){
-    document.querySelector(".reg_message_abdo").classList.add('d-none');
 
-    document
-      .querySelector(".register_abdo")
-      .classList.add("display_none_abdo");
+  if (
+    check_reg_abdo.index1 == 0 &&
+    check_reg_abdo.index2 == 0 &&
+    check_reg_abdo.index3 == 0 &&
+    check_reg_abdo.index4 == 0
+  ) {
+    document.querySelector(".reg_message_abdo").classList.add("d-none");
+
+    document.querySelector(".register_abdo").classList.add("display_none_abdo");
     document.querySelector(".login_abdo").classList.remove("display_none_abdo");
     stored_data_abdo();
-  }else{
-    document.querySelector(".reg_message_abdo").innerHTML="please complete all inputs";
-    document.querySelector(".reg_message_abdo").classList.remove('d-none');
+  } else {
+    document.querySelector(".reg_message_abdo").innerHTML =
+      "please complete all inputs";
+    document.querySelector(".reg_message_abdo").classList.remove("d-none");
   }
- 
-
 });
 
-// end register page 
+// end register page
 
 // start login page
 let login_form_btn_abdo = document.querySelector(".login_form_btn_abdo");
 
 document.addEventListener("click", (e) => {
   e.stopPropagation();
+  let email = document.getElementById("email_login").value;
+  let password = document.getElementById("password_login").value;
 
   if (!document.querySelector(".login_box_abdo form").contains(e.target)) {
     document.querySelector(".login_abdo").classList.add("display_none_abdo");
+    email = "";
+    password = "";
   }
 });
 
@@ -244,14 +249,14 @@ login_form_btn_abdo.addEventListener("click", (e) => {
 
   let email = document.getElementById("email_login").value;
   let password = document.getElementById("password_login").value;
-  let flag=false;
+  let flag = false;
 
   for (let i = 0; i < container_localStorage_abdo.length; i++) {
     if (
       container_localStorage_abdo[i].email === email &&
       container_localStorage_abdo[i].password === password
     ) {
-      flag=true;
+      flag = true;
       document
         .querySelector(".logOut_icon_abdo")
         .classList.remove("display_none_abdo");
@@ -268,19 +273,16 @@ login_form_btn_abdo.addEventListener("click", (e) => {
       i = container_localStorage_abdo.length;
       email = "";
       password = "";
-      document.querySelector('.log_message_abdo').classList.remove('d-none');
-      document.querySelector('.log_message_abdo').classList.add('d-none');
-
+      document.querySelector(".log_message_abdo").classList.remove("d-none");
+      document.querySelector(".log_message_abdo").classList.add("d-none");
     }
   }
 
- 
-      if(!flag){
-        document.querySelector('.log_message_abdo').classList.remove('d-none');
-      document.querySelector('.log_message_abdo').innerHTML="incorrect login please try again";
-   
-      }
-
+  if (!flag) {
+    document.querySelector(".log_message_abdo").classList.remove("d-none");
+    document.querySelector(".log_message_abdo").innerHTML =
+      "incorrect login please try again";
+  }
 });
 
 document.querySelector(".logOut_icon_abdo").addEventListener("click", (e) => {
