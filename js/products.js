@@ -87,11 +87,11 @@ function click_img_product_fatma() {
         ${item.children[1].children[1].outerHTML}
       </div>
       <div class="details_product_fatma mb-3 d-flex justify-content-between">
-        ${item.children[2].children[0].outerHTML}
-        ${item.children[2].children[1].outerHTML}
+        ${item.children[3].children[0].outerHTML}
+        ${item.children[3].children[1].outerHTML}
       </div> 
 
-      ${item.children[3].outerHTML}
+      ${item.children[4].outerHTML}
     </div>
 `;
       console.log(cartona);
