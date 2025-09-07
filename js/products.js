@@ -43,11 +43,11 @@ function display_products_fatma(data) {
                     .join(" ")}</h2>
                   <span>${data[i].price}$</span>
                 </div>
-                 <ul class="list-unstyled bg-black w-auto  position-absolute px-2 end-0 top-0">
-              <li><i class="fa-solid fa-heart text-white"></i></li>
-              <li><i class="fa-solid fa-share text-white"></i></li>
-              <li><i class="fa-solid fa-search text-white"></i></li>
-            </ul>
+                <ul class="list-unstyled bg-black w-auto  position-absolute px-2 end-0 top-0">
+                  <li><i class="fa-solid fa-heart text-white"></i></li>
+                  <li><i class="fa-solid fa-share text-white"></i></li>
+                  <li><i class="fa-solid fa-search text-white"></i></li>
+               </ul>
                 <div
                   class="details_product_fatma d-none justify-content-between"
                 >
@@ -173,8 +173,8 @@ function add_product_inSidebar_fatma(product) {
                ${product.children[1].children[1].outerHTML}
             </div>
             <div class="details_product_fatma d-flex justify-content-between">
-               ${product.children[2].children[0].outerHTML}
-               ${product.children[2].children[1].outerHTML}
+               ${product.children[3].children[0].outerHTML}
+               ${product.children[3].children[1].outerHTML}
                </div>
                     <div
                   class="btns  w-100" 
